@@ -6,18 +6,19 @@
 <script type="text/javascript">
   g2 = new Dygraph(
     document.getElementById("graphdiv2"),
-    "data_cleaned.csv", // path to CSV file
+    "data_cleaned.csv", 
     {
-	 title: 'Ilias T&A Bugchart',
-	 xValueFormatter: Dygraph.dateString_,
-     xValueParser: function(x) { return 1000*parseInt(x); },
-     xTicker: Dygraph.dateTicker,
-     xLabel: 'Date',
-     yLabel: 'Count',
-     delimiter: ';',
-     labels: ["Date", "Open", "Resolved", "All"],
-     colors: ['red', 'green', 'blue'],
-     fillGraph:true}          // options
+	 title: 'Ilias T&A Bugchart' ,
+	 xValueFormatter: Dygraph.dateString_ ,
+	 xValueParser: function(x) { return 1000*parseInt(x); } ,
+	 xTicker: Dygraph.dateTicker ,
+	 xLabel: 'Date' ,
+	 yLabel: 'Count' ,
+	 delimiter: ';' ,
+	 labels: ["Date", "Open", "Resolved", "All"] ,
+	 colors: ['red', 'green', 'blue'] ,
+	 fillGraph:true
+    }        
   );
 </script>
 
