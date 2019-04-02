@@ -55,7 +55,7 @@ SimpleILIASDashboard = (function () {
     return '<div class="col-xl-6 col-lg-6"> ' +
             '<div class="card shadow mb-4">' +
                pri.html_snippets.card_header_html_begin +
-                '<h6>Dicto ' + date + '</h6>' + '<h6>' + job_id + '</h6>' +
+                '<h6>Dicto ' + date + '</h6>' + '<a href=" ' + url + ' "><h6>' + job_id + '</h6></a>' +
               '</div>' +
               '<div class="card-body d-flex justify-content-between">' + 
                 pri.html_snippets.dicto_state_html + ' badge-warning mr-2" href="#">' + total + ' Total</a> </span>' +
@@ -130,12 +130,12 @@ SimpleILIASDashboard = (function () {
       );
   };
 
-  pro.compareBySecond = function(first, second) {
+  pro.compareByThird = function(first, second) {
     let left = first.split(',');
     let right = second.split(',');
-    if (left[1] < right[1]) {
+    if (left[2] < right[2]) {
         return 1;
-    } else if (left[1] > right[1] ){
+    } else if (left[2] > right[2] ){
         return -1;
     } else {
         return 0;
@@ -145,7 +145,7 @@ SimpleILIASDashboard = (function () {
   pub.createPHPUnitWidgets = function (data) {
     let allRows = data.split(/\r?\n|\r/);
 
-    allRows.sort(pro.compareBySecond);
+    allRows.sort(pro.compareByThird);
 
     $('.card-header').find('.badge-danger').remove();
 
@@ -166,7 +166,7 @@ SimpleILIASDashboard = (function () {
             let version_string = 'ILIAS_' + version;
 
         if( $('.phpunit_data').find('.' + version_string).length === 0) {
-           $('.phpunit_data').append('<div class="' + version_string + ' col-md-12"><h4>' + version_string + '</h4></div>')
+            $('.phpunit_data').append('<div class="' + version_string + ' col-md-12"><h4>' + version_string + '</h4></div>')
         }
         $('.phpunit_data .' + version_string).append(pub.createPHPUnitWidget(url, version_string, job_id, id, title, warn, skip, incomp, failed, failure));
 
