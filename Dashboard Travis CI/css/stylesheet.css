@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  font-family: OpenSans Regular,sans-serif;
+	background-color: #F2F6FF;
+}
+
+
+
+
+h1 {
+	font-size: 28px;
+	font-weight: bold;
+	color: #fff;
+	font-family: 'Asap', sans-serif;
+	
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: bold;
+	font-family: 'Asap', sans-serif;
+	color: #373535;
+	
+}
+
+@font-face {
+  font-family: OpenSans Regular;
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: OpenSans Bold;
+  src: url("../fonts/OpenSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: Asap Regular;
+  src: url("../fonts/Asap-Regular.ttf");
+}
+
+@font-face {
+  font-family: Asap Bold;
+src: url("../fonts/Asap-Bold.ttf");
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  background-color: #003a66;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #17295f;
+	border-left: 5px solid #34A9E1;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #17295f;
+  color: white;
+}
+
+div.content {
+  margin-left: 260px;
+  padding: 40px;
+  height: 1000px;
+}
+
+
+.headersidenav {
+	font-weight: bold;
+	font-size: 28px;
+	padding: 16px;
+	color: white;
+}
+
+span.badge.badge-pill.badge-danger {
+    font-size: 60%;
+	margin-left: 8px;
+}
+
+.badge-success {
+    color: #212529;
+    background-color: #87ff61 !important
+  }
+
+span.badge.badge-pill.badge-success {
+    font-size: 60%;
+  margin-left: 8px;
+}
+
+
+.travis:before {
+	content: "";
+    display: block;
+    background: url("../icon/Travis-Ci_icon.svg") no-repeat;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 3px 6px 0 0;
+}
+
+.testo{
+	position: absolute;
+	right: 10px;
+	
+}
+
+
+.dicto:before {
+	content: "";
+    display: block;
+    background: url("../icon/Octicons-mark-github.svg") no-repeat;
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin: 3px 6px 0 0;
+}
+
+.iliaslogo {
+    bottom: 0px;
+    text-align: center;
+    position:absolute;
+}
+
+.iliaslogo:hover {
+    background-color: #003a66 !important;
+}
+
+.iliaslogo img {
+    width: 50%;
+}
+
+
+.text-assertations {
+color: #74B85D;	
+}
+
+.text-warnings {
+color: #92C780;	
+}
+
+.text-skipped {
+color: #BBDCAF;	
+}
+
+.text-incomplete {
+color: #D8EBD2;	
+}
+
+.text-failed {
+color: #c7372b; 
+}
+
+.text-assertations-warning {
+color: #c7372b;	
+}
+
+.text-warnings-warning {
+color: #e20201;	
+}
+
+.text-skipped-warning {
+color: #f33a2f;	
+}
+
+.text-incomplete-warning {
+color: #fa6553;	
+}
+
+.text-failed-warning {
+color: #c7372b; 
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+.phpunit {
+  border: 5px solid #f3f3f3;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-top: 5px solid #555;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: 35%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  }
+
+.card-body .hidden{
+  display:none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.col-xl-4{
+  float:left;
+}
+
+.list-group-item {
+  background-color: #17295f !important;
+}
