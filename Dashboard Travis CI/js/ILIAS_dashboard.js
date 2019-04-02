@@ -26,7 +26,7 @@ SimpleILIASDashboard = (function () {
             ' <div class="col-xl-12">' +
               ' <div class="card shadow mb-4" id="' + version + '_' + id + '_card">' +
                 pri.html_snippets.card_header_html_begin +
-                ' <h6>' + title + '</h6>' + '<h7>' + job_id + '</h7>' +
+                ' <h5>' + title + '</h6>' + '<h7>' + job_id + '</h7>' +
               ' </div>' +
               ' <div class="card-body phpunit">' +
                 ' <div class="row hidden">' +
@@ -166,7 +166,9 @@ SimpleILIASDashboard = (function () {
             let version_string = 'ILIAS_' + version;
 
         if( $('.phpunit_data').find('.' + version_string).length === 0) {
-            $('.phpunit_data').append('<div class="' + version_string + ' col-md-12"><h4>' + version_string + '</h4></div>')
+            let version_readable = version_string.replace(/_/g, ".");
+            version_readable = version_readable.replace(/ILIAS\./g, "ILIAS ");
+            $('.phpunit_data').append('<div class="' + version_string + ' col-md-12"><h5>' + version_readable + '</h5></div>')
         }
         $('.phpunit_data .' + version_string).append(pub.createPHPUnitWidget(url, version_string, job_id, id, title, warn, skip, incomp, failed, failure));
 
