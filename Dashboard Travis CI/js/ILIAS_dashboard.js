@@ -55,13 +55,20 @@ SimpleILIASDashboard = (function () {
     if(jf > 0) {
       jf = '+' + jf;
     }
+
+    if(jf === "0") {
+      jf = '';
+    }
+    else{
+      jf = pri.html_snippets.dicto_state_html + ' badge-primary mr-2" href="#">' + jf + ' Since last JF</a> </span>';
+    } 
     return '<div class="col-xl-6 col-lg-6"> ' +
             '<div class="card shadow mb-4">' +
                pri.html_snippets.card_header_html_begin +
                 '<h6>Dicto ' + date + '</h6>' + '<a href=" ' + url + ' "><h6>' + job_id + '</h6></a>' +
               '</div>' +
               '<div class="card-body d-flex justify-content-between">' + 
-                pri.html_snippets.dicto_state_html + ' badge-primary mr-2" href="#">' + jf + ' Since last JF</a> </span>' +
+                jf + 
                 pri.html_snippets.dicto_state_html + ' badge-warning mr-2" href="#">' + total + ' Total</a> </span>' +
                 pri.html_snippets.dicto_state_html + ' badge-success mr-2" href="#">' + resolved + ' Resolved</a> </span>' +
                 pri.html_snippets.dicto_state_html + ' badge-danger mr-2" href="#">'  + added + ' Added</a> </span>' +
