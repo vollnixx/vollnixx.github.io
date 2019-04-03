@@ -52,6 +52,9 @@ SimpleILIASDashboard = (function () {
 
     pub.createDictoWidget = function (date, job_id, url, jf, total, resolved, added) {
 
+    if(jf > 0) {
+      jf = '+' + jf;
+    }
     return '<div class="col-xl-6 col-lg-6"> ' +
             '<div class="card shadow mb-4">' +
                pri.html_snippets.card_header_html_begin +
