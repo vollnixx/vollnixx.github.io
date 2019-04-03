@@ -50,7 +50,7 @@ SimpleILIASDashboard = (function () {
         ' </a>' ;
   }
 
-    pub.createDictoWidget = function (date, job_id, url, total, resolved, added) {
+    pub.createDictoWidget = function (date, job_id, url, jf, total, resolved, added) {
 
     return '<div class="col-xl-6 col-lg-6"> ' +
             '<div class="card shadow mb-4">' +
@@ -58,6 +58,7 @@ SimpleILIASDashboard = (function () {
                 '<h6>Dicto ' + date + '</h6>' + '<a href=" ' + url + ' "><h6>' + job_id + '</h6></a>' +
               '</div>' +
               '<div class="card-body d-flex justify-content-between">' + 
+                pri.html_snippets.dicto_state_html + ' badge-primary mr-2" href="#">' + jf + ' Since last JF</a> </span>' +
                 pri.html_snippets.dicto_state_html + ' badge-warning mr-2" href="#">' + total + ' Total</a> </span>' +
                 pri.html_snippets.dicto_state_html + ' badge-success mr-2" href="#">' + resolved + ' Resolved</a> </span>' +
                 pri.html_snippets.dicto_state_html + ' badge-danger mr-2" href="#">'  + added + ' Added</a> </span>' +
@@ -191,12 +192,13 @@ SimpleILIASDashboard = (function () {
          if(cells.length > 1) {
             let  date     = cells[0], 
                  job_id   = cells[1],
-                 url      = cells[2], 
-                 total    = cells[3], 
-                 resolved = cells[4], 
-                 added    = cells[5];
+                 url      = cells[2],
+                 jf       = cells[3], 
+                 total    = cells[4], 
+                 resolved = cells[5], 
+                 added    = cells[6];
       
-            $('.dicto-data').append(pub.createDictoWidget(date, job_id, url, total, resolved, added));
+            $('.dicto-data').append(pub.createDictoWidget(date, job_id, url, jf, total, resolved, added));
       }
     }
   };
