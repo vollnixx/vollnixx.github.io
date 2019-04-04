@@ -56,22 +56,25 @@ SimpleILIASDashboard = (function () {
       jf = '+' + jf;
     }
 
-    if(jf === "0") {
-      jf = '';
-    }
-    else{
-      jf = pri.html_snippets.dicto_state_html + ' badge-primary mr-2" href="#">' + jf + ' Since last JF</a> </span>';
+    let title  =  '<h6>Dicto ' + date + '</h6>' + '<a href=" ' + url + ' "><h6>' + job_id + '</h6></a>';
+    let values =  pri.html_snippets.dicto_state_html + ' badge-warning mr-2" href="#">' + total + ' Total</a> </span>' +
+                  pri.html_snippets.dicto_state_html + ' badge-success mr-2" href="#">' + resolved + ' Resolved</a> </span>' +
+                  pri.html_snippets.dicto_state_html + ' badge-danger mr-2" href="#">'  + added + ' Added</a> </span>'; 
+
+    if(jf !== "0"){
+      title = 'Since last Jour fixe';
+      values =  pri.html_snippets.dicto_state_html + ' badge-warning mr-2" href="#">' + jf + ' Total</a> </span>' +
+                  pri.html_snippets.dicto_state_html + ' badge-success mr-2" href="#">' + resolved + ' Resolved</a> </span>' +
+                  pri.html_snippets.dicto_state_html + ' badge-danger mr-2" href="#">'  + added + ' Added</a> </span>'; 
     } 
-    return '<div class="col-xl-6 col-lg-6"> ' +
+
+    return '<div class="col-xl-4 col-lg-4"> ' +
             '<div class="card shadow mb-4">' +
                pri.html_snippets.card_header_html_begin +
-                '<h6>Dicto ' + date + '</h6>' + '<a href=" ' + url + ' "><h6>' + job_id + '</h6></a>' +
+                title +
               '</div>' +
               '<div class="card-body d-flex justify-content-between">' + 
-                jf + 
-                pri.html_snippets.dicto_state_html + ' badge-warning mr-2" href="#">' + total + ' Total</a> </span>' +
-                pri.html_snippets.dicto_state_html + ' badge-success mr-2" href="#">' + resolved + ' Resolved</a> </span>' +
-                pri.html_snippets.dicto_state_html + ' badge-danger mr-2" href="#">'  + added + ' Added</a> </span>' +
+               values
               '</div>' +
             '</div>' +
           '</div>';
