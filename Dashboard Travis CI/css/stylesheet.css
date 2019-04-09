@@ -232,3 +232,25 @@ color: #c7372b;
 .list-group-item {
   background-color: #17295f !important;
 }
+
+.custom-risky-warning{
+  color: #C7372B !important;
+}
+
+.custom-risky{
+  color: #74B85D !important;
+}
+
+.text-failed-warning{
+  color: #99372B !important;
+}
+
+.date_footer{
+  text-align:right;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+
+.card-body {
+  padding-bottom: 0em !important;
+}
