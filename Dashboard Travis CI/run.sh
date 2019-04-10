@@ -5,7 +5,7 @@ PHPUNIT_PATH="/tmp/phpunit_latest.csv"
 DATE=`date '+%Y-%m-%d-%H:%M:%S'`
 FOLDER_DATE=`date '+%Y-%m'`
 
-if [ ! -d "results/$FOLDER_DATE"]
+if [ ! -d "results/$FOLDER_DATE" ]
 then
 	mkdir "results/$FOLDER_DATE"
 fi
