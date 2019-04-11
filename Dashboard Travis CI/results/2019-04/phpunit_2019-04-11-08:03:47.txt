@@ -1,3 +1,0 @@
-
-https://travis-ci.com/vollnixx/TravisWorkflow2/jobs/192088288,171.2,,php_7_3,PHP 7_3,0,0,0,0,0,0,true,2019-04-11-08:01:11
-https://travis-ci.com/vollnixx/TravisWorkflow2/jobs/192088901,172.1,,php_7_2,PHP 7_2,0,0,0,0,0,0,true,2019-04-11-08:03:43
